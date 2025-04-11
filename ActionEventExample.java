@@ -9,7 +9,7 @@ import java.awt.event.*;
 
 
 public class ActionEventExample extends Applet implements ActionListener {
-    String actionmessage = "";
+    String actionMessage = "";
     public void init(){
         Button b1 = new Button("OK");
         Button b2 = new Button("Submit");
@@ -19,14 +19,14 @@ public class ActionEventExample extends Applet implements ActionListener {
         b2.addActionListener(this);
     }
     public void paint(Graphics g){
-        g.drawString(actionmessage, 20, 50);
+        g.drawString(actionMessage, 20, 50);
     }
     public void actionPerformed(ActionEvent ae){
         String action = ae.getActionCommand();
         if (action.equals("OK")){
-            actionmessage = "OK button clicked";
+            actionMessage = "OK button clicked";
         } else if (action.equals("Submit")){
-            actionmessage = "Submit button clicked";
+            actionMessage = "Submit button clicked";
         }
         repaint();
     }
